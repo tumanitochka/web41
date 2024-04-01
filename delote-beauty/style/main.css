@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url(../style/font/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+    
+    font-family: "Garamond";
+    src: url(../style/font/EB_Garamond/static/EBGaramond-Regular.ttf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Garamond";
+}
+
+html, body {
+    font-family: "Cormorant Garamond";
+
+    width: 100%;
+    height: 100%;
+    background: url(../style/img/bg.jfif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-color: #00000080;
+    /* прижимаем footer к нижней части */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 1280px;
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo {
+    margin: 0 40px;
+}
+
+#menu {
+    display: none;
+}
+
+#menu:checked ~ .menu {
+    transform: translate(0, 0);
+}
+
+label {
+    cursor: pointer;
+}
+
+.menu {
+    transform: translate(475px, 0);
+    transition: all .4s linear;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+
+    background-color: #111111e8;
+    border-left: solid 1px #FFFFFF;
+    padding: 0 80px;
+    color: #FFFFFF;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    height: 100%;
+    width: 475px;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.menu label {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+}
+
+.menu ul {
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu ul li:first-child {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 1280px;
+    margin: 0 auto;
+    border-color: #FFFFFF80;
+}
